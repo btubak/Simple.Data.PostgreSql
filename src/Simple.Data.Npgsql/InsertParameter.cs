@@ -14,6 +14,10 @@ namespace Simple.Data.Npgsql
                     value = Convert.ChangeType(value, Enum.GetUnderlyingType(valueType));
                 }
             }
+            else
+            {
+                value = DBNull.Value;
+            }
 
             return value;
         }
